@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.header {
+    height: 800px;
+    background: #E1FF8F;
+    background-image: url(./img/star1.png), url(./img/star2.png), url(./img/Star\ 1.svg);
+    background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), 140% -334px;
+    background-repeat: no-repeat;
+
+    &__title {
+        color: #202027;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-top: 196px;
+        padding-bottom: 24px;
+    }
+    
+    &__text {
+        color: #202027;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-bottom: 48px;
+    }
+    
+    &__button {
+        width: 247px;
+        box-sizing: border-box;
+        border: 1px solid #202027;
+        border-radius: 60px;
+        background: #202027;
+        padding: 16px 28px 16px 28px;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        &:hover {
+            background: #ffffff;
+            color: #000;
+            cursor: pointer;
+        }
+    }
+    
+}
+
+.skroll-bar {
+    box-sizing: border-box;
+    border: 1px solid #ffffff33;
+    backdrop-filter: blur(50px);
+    background: #bcec30;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    height: 90px;
+    width: 3220px;
+    align-items: center;
+
+    &__text {
+        color: #202027;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-left: 51px;
+        padding-right: 51px;
+    }
+}
+
+.games-box{
+    background: #202027;
+    padding-bottom: 96px;
+    background-image: url(./img/StarBig.svg), url(./img/Star1.svg), url(./img/Star\ 11.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 10%, 10% 57%, 9% 53%;;
+    
+    &__title {
+        color: #ffffff;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-top: 94px;
+    }
+    &__text {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-top: 24px;
+        padding-bottom: 72px;
+    }
+}
+
+.game-cart {
+    max-height: 1060px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    align-items: start;
+
+    &__img {
+        display: flex;
+        flex-direction: column;
+        grid-column: span 4;
+        background-color: #FFFFFF ;
+        border-radius: 30px;
+        text-decoration: none;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        &:nth-child(4),
+        &:nth-child(6) {
+            margin-top: -32px;
+        }
+    }
+    &__img:hover {
+        cursor: pointer;
+        cursor: pointer;
+        transform: scale(1.1);
+        z-index: 1;
+    }
+    
+    &__item {
+        border-radius: 30px;
+        height: 314px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &_1 {
+            background: url(./img/games-1.jpeg);
+        }
+        &_2 {
+            background: url(./img/games-2.jpeg);
+        }
+        &_3 {
+            background: url(./img/games-3.jpeg);
+        }
+        &_4 {
+            background: url(./img/games-4.jpeg);
+        }
+        &_5 {
+            background: url(./img/games-5.jpeg);
+        }
+        &_6 {
+            background: url(./img/games-6.jpeg);
+        }
+    }
+    
+    &__number {
+        border-radius: 52.58px;
+        background: rgb(247, 247, 247);
+        width: 111px;
+        height: 36px;
+        color: #202027;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-top: 32px;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 32px;
+    }
+    &__text {
+        color: rgb(32, 32, 39);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-left: 32px;
+        margin-bottom: 36px;
+    } 
+}
