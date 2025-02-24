@@ -66,7 +66,6 @@ body {
     
 }
 
-
 .skrollbar {
     box-sizing: border-box;
     border: 1px solid #ffffff33;
@@ -210,5 +209,117 @@ body {
     } 
 }
 
+.mini-games-box {
+    background: #202027;
+    padding-bottom: 144px;
+
+    &__title {
+        color: rgb(255, 255, 255);
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-bottom: 72px;
+    }
+    &__star-1 {
+        position: absolute;
+        left: 1180px;
+        top: 2440px;
+    }
+    &__star-2 {
+        position: absolute;
+        left: 1210px;
+        top: 2470px;
+    }
+    &__star-3 {
+        position: absolute;
+        left: 1160px;
+        top: 5745px;
+    }
+    &__star-4 {
+        position: absolute;
+        left: 1210px;
+        top: 5700px;
+    }
+}
+
+.mini-games-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.miniGames-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    grid-column: 32px;
+    &:nth-child(2n) {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+}
+
+.card-info {
+    padding: 48px;
+
+    &__title {
+        color: #202027;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 59px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-bottom: 24px;
+    }
+    &__desc {
+        color: #202027;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-bottom: 36px;
+    }
+    &__btn {
+        border-radius: 60px;
+        background: #202027;
+        width: 247px;
+        height: 66px;
+        font: inherit;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 141.69%;
+        letter-spacing: 0%;
+        text-align: center;
+        &:hover {
+            box-sizing: border-box;
+            border: 1px solid #000000;
+            border-radius: 60px;
+            background: #ffffff;
+            color: #202027;
+        }
+    }
+}
+
+.game-footer {
+    background: #BDED35;
+    &__text {
+        color: #000000;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        letter-spacing: 0px;
+        text-align: center;
+        padding-top: 61px;
+        padding-bottom: 60px;
+    }
+}
 
 @import 'mobile';
