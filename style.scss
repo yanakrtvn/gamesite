@@ -20,8 +20,9 @@ body {
     height: 800px;
     background: #E1FF8F;
     background-image: url(./img/star1.png), url(./img/star2.png), url(./img/Star\ 1.svg);
-    background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), 140% -334px;
+    background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), calc(100% + 470px) calc(100% - 0px);
     background-repeat: no-repeat;
+    overflow: hidden;
 
     &__title {
         color: #202027;
@@ -63,7 +64,6 @@ body {
             cursor: pointer;
         }
     }
-    
 }
 
 .skrollbar {
@@ -212,7 +212,9 @@ body {
 .mini-games-box {
     background: #202027;
     padding-bottom: 144px;
-
+    background-image: url(./img/star-1-MGames.svg), url(./img/star-2-MGames.svg), url(./img/star-3-MGames.svg), url(./img/star-4-MGames.svg);
+    background-repeat: no-repeat;
+    background-position: 82% 0.9%, 86% 2.3%, 82% 99%, 86% 98%;
     &__title {
         color: rgb(255, 255, 255);
         font-size: 64px;
@@ -221,27 +223,7 @@ body {
         letter-spacing: 0px;
         text-align: left;
         padding-bottom: 72px;
-    }
-    &__star-1 {
-        position: absolute;
-        left: 1180px;
-        top: 2440px;
-    }
-    &__star-2 {
-        position: absolute;
-        left: 1210px;
-        top: 2470px;
-    }
-    &__star-3 {
-        position: absolute;
-        left: 1160px;
-        top: 5745px;
-    }
-    &__star-4 {
-        position: absolute;
-        left: 1210px;
-        top: 5700px;
-    }
+    }   
 }
 
 .mini-games-content {
