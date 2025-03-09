@@ -1,8 +1,8 @@
 @media (max-width: 767px) {
     .header {
         background-image: url(./img/Star2Mob.svg), url(./img/Star3Mob.svg), url(./img/Star5Mob.svg), url(./img/Star4Mob.svg), url(./img/StarMob.svg);
-        background-position: 37px 97px, 91px 64px, calc(135% - 190px) calc(90% - 60px), 303px 580px, 180% -90px;
-        max-height: 700px;
+        background-position: 37px 97px, 91px 64px, calc(135% - 250px) calc(90% - 20px), 330px 580px, 150% -80px;
+        max-height: 648px;
         display: flex;
         flex-direction: column;
         align-content: center;

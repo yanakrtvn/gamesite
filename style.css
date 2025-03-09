@@ -20,8 +20,9 @@ body {
   height: 800px;
   background: #E1FF8F;
   background-image: url(./img/star1.png), url(./img/star2.png), url(./img/Star\ 1.svg);
-  background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), 140% -334px;
+  background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), calc(100% + 470px) calc(100% - 0px);
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .header__title {
   color: #202027;
@@ -202,6 +203,9 @@ body {
 .mini-games-box {
   background: #202027;
   padding-bottom: 144px;
+  background-image: url(./img/star-1-MGames.svg), url(./img/star-2-MGames.svg), url(./img/star-3-MGames.svg), url(./img/star-4-MGames.svg);
+  background-repeat: no-repeat;
+  background-position: 82% 0.9%, 86% 2.3%, 82% 99%, 86% 98%;
 }
 .mini-games-box__title {
   color: rgb(255, 255, 255);
@@ -211,26 +215,6 @@ body {
   letter-spacing: 0px;
   text-align: left;
   padding-bottom: 72px;
-}
-.mini-games-box__star-1 {
-  position: absolute;
-  left: 1180px;
-  top: 2440px;
-}
-.mini-games-box__star-2 {
-  position: absolute;
-  left: 1210px;
-  top: 2470px;
-}
-.mini-games-box__star-3 {
-  position: absolute;
-  left: 1160px;
-  top: 5745px;
-}
-.mini-games-box__star-4 {
-  position: absolute;
-  left: 1210px;
-  top: 5700px;
 }
 
 .mini-games-content {
@@ -314,8 +298,8 @@ body {
 @media (max-width: 767px) {
   .header {
     background-image: url(./img/Star2Mob.svg), url(./img/Star3Mob.svg), url(./img/Star5Mob.svg), url(./img/Star4Mob.svg), url(./img/StarMob.svg);
-    background-position: 37px 97px, 91px 64px, calc(135% - 190px) calc(90% - 60px), 303px 580px, 180% -90px;
-    max-height: 700px;
+    background-position: 37px 97px, 91px 64px, calc(135% - 250px) calc(90% - 20px), 330px 580px, 150% -80px;
+    max-height: 648px;
     display: flex;
     flex-direction: column;
     align-content: center;
