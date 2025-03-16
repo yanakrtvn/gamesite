@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-content: center;
     align-items: flex-start;
-    height: 800px;
+    height: 710px;
     background: #E1FF8F;
     background-image: url(./img/star1.png), url(./img/star2.png), url(./img/Star\ 1.svg);
     background-position: 63px 69px, calc(100% - 344px) calc(100% - 149px), calc(100% + 470px) calc(100% - 0px);
@@ -73,7 +73,7 @@ body {
     background: #bcec30;
     display: flex;
     overflow: hidden;
-    max-height: 90px;
+    height: 90px;
     align-items: center;
     padding: 16px 24px 16px 24px;
 }
@@ -267,6 +267,7 @@ body {
         letter-spacing: 0px;
         text-align: left;
         padding-bottom: 36px;
+        width: 497px;
     }
     &__btn {
         border-radius: 60px;
@@ -285,7 +286,7 @@ body {
             border: 1px solid #000000;
             border-radius: 60px;
             background: #ffffff;
-            color: #202027;
+            color: #000000;
         }
     }
 }
