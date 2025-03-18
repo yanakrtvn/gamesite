@@ -1,11 +1,8 @@
 // Задание 1
 function min(a, b) {
-    if (a < b) {
-        return a;
-    } else {
-        return b;
-    }
+    return a > b ? a : b;
 }
+
 
 console.log(min(8, 4));
 console.log(min(6, 6));
@@ -100,14 +97,14 @@ function getPerimeter() {
 
 const circle1 = {
     radius: 7,
-    getArea: getArea,
-    getPerimeter: getPerimeter
+    getArea,
+    getPerimeter
 }
 
 const circle2 = {
     radius: 2,
-    getArea: getArea,
-    getPerimeter: getPerimeter
+    getArea,
+    getPerimeter
 }
 
 console.log(circle1.getArea());
