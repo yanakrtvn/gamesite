@@ -202,3 +202,63 @@ function playGame4() {
     
     startQuiz();
 }
+
+// Игра 5 
+
+function playGame5() {
+    alert('Привет! Давай сыграем в известную игру "Камень, ножницы, бумага".');
+
+    const optionsChoose = ["камень", "ножницы", "бумага"];
+
+    let playerScore = 0;
+    let computerScore = 0;
+    let roundsGame = parseInt(prompt("Сколько раундов будем играть?"));
+
+    if (isNaN(roundsGame) || roundsGame <= 0) {
+        alert("Некорректный ввод количества раундов. В таком случае, сыграем один раунд");
+        roundsGame = 1;
+    }
+
+    for (let index = 0; index < roundsGame; index++) {
+        const playerChoice = prompt(`Раунд ${index + 1}! Твой ход, выбирай: ${optionsChoose.join(", ")}?`).toLowerCase(); 
+
+    if (!optionsChoose.includes(playerChoice)) {
+        alert('Некорректный ввод! Пожалуйста, выбери один из предложенных вариантов');
+        index--;
+        continue;
+    }
+
+    const choosingComputer = optionsChoose[Math.floor(Math.random() * optionsChoose.length)];
+
+    let result;
+
+    if (playerChoice === choosingComputer) {
+        result = "Ничья!";
+    } else if (
+
+    (playerChoice === "камень" && choosingComputer === "ножницы") ||
+    (playerChoice === "ножницы" && choosingComputer === "бумага") ||
+    (playerChoice === "бумага" && choosingComputer === "камень")
+
+    ) {
+        result = "В этом раунде победа за тобой!";
+        playerScore++;
+
+    } else {
+        result = "В этом раунде победа за мной";
+        computerScore++;
+    }
+
+    alert(`Твой выбор: ${playerChoice}\nМой выбор: ${choosingComputer}\nРезультат нашей игры: ${result}`);
+    alert(`Твой счет: ${playerScore}, мой счет: ${computerScore}`);
+    }
+
+    if (playerScore > computerScore) {
+        alert("Поздравляю, ты выиграл!");
+
+    } else if (computerScore > playerScore) {
+        alert("Победа за мной! В следующий раз тебе повезёт больше.");
+    } else {
+        alert("Ничья!");
+    }
+}
