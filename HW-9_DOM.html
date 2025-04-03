@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Задание 1 -->
+    <h1 class="title">Это заголовок, который можно скрыть и показать</h1>
+    <button class="hideText">Скрыть</button>
+
+<!-- Задание 2 -->
+    <p class="textColor">Текст, которому можно поменять цвет</p>
+    <button class="colorChange">Изменить цвет</button>
+
+<!-- Задание 3 -->
+    <h1 class="title2">Нажми на кнопку и текст поменяется</h1>
+    <button class="textChange">Изменить текст</button>
+
+<br>
+<br>
+
+<!-- Задание 4 -->
+    <p class="description">Это первый элемент</p>
+    <p class="description">Это второй элемент</p>
+    <p class="description">Это третий элемент</p>
+    <p class="description">Это четвертый элемент</p>
+
+<br>
+
+<!-- Задание 5 -->
+    <p class="descript">Это первый параграф</p>
+    <p class="two">Это второй параграф</p>
+    <p class="descript">Это третий параграф</p>
+    <p class="four">Это четвертый параграф</p>
+    <p class="descript">Это пятый параграф</p>
+    <p class="six">Это шестой параграф</p>
+
+<br>
+<br>
+
+<!-- Задание 6 -->
+    <button class="addition">Добавить элемент</button>
+
+<br>
+<br>
+
+<!-- Задание 7 -->
+    <p class="desc">Этот абзац будет удален</p>
+    <p class="paragraph">Это второй абзац</p>
+    <p class="para">Это третий абзац</p>
+    <p class="desc">Этот четвертый абзац</p>
+    <button class="remove">Удалить элемент</button>
+
+    <script>
+        // Задание 1
+        const titleEL = document.querySelector('.title');
+        const buttonEL = document.querySelector('.hideText');
+
+        buttonEL.addEventListener('click', () => {
+            if (titleEL.style.display === 'none') {
+                titleEL.style.display = 'block';
+            } else {
+                titleEL.style.display = 'none'; 
+                buttonEL.textContent = 'Показать';
+            }
+        });
+
+        // Задание 2
+        const textColorEL = document.querySelector('.textColor');
+        const colorChangeEL = document.querySelector('.colorChange');
+
+        colorChangeEL.addEventListener('click', () => {
+            textColorEL.style.color = 'blue';
+        });
+
+        // Задание 3
+        const title2EL = document.querySelector('.title2');
+        const textChangeEL = document.querySelector('.textChange');
+
+        textChangeEL.addEventListener('click', () => {
+            title2EL.textContent = 'Привет, мир!';
+        });
+
+        // Задание 4
+        const descriptionEL = document.querySelectorAll('.description');
+
+        descriptionEL.forEach(description => {
+            description.textContent = 'Изменённый текст';
+        });
+
+        // Задание 5
+        const descriptEL = document.querySelectorAll('.descript');
+
+        descriptEL.forEach(descript => {
+            descript.textContent = 'Новый текст';
+        });
+        
+        // Задание 6
+        const additionEL = document.querySelector('.addition');
+
+        additionEL.addEventListener('click', () => {
+            const newParagraph = document.createElement('p');
+
+            newParagraph.textContent = 'Новый абзац';
+            newParagraph.classList.add('newP');
+            document.body.appendChild(newParagraph);
+        });
+
+        // Задание 7
+        const removeEL = document.querySelector('.remove');
+        const descEL = document.querySelector('.desc');
+
+        removeEL.addEventListener('click', () => {
+            descEL.remove();
+        });
+    </script>
+</body>
+</html>
