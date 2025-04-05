@@ -262,3 +262,33 @@ function playGame5() {
         alert("Ничья!");
     }
 }
+
+// Игра 6
+
+const changeBackgroundBtn = document.getElementById('changeBackgroundBtn');
+
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+function changeBackgroundColor() {
+    const randomColor = getRandomColor();
+
+    const elementsToChange = [
+        document.getElementById('game'),
+        document.querySelector('.mini-games-box') 
+    ];
+
+    elementsToChange.forEach(element => {
+        if (element) { 
+            element.style.backgroundColor = randomColor;
+        } else {
+            console.warn("Элемент не найден.");
+        }
+    });
+}
+
+changeBackgroundBtn.addEventListener('click', changeBackgroundColor);
