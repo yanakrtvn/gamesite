@@ -292,3 +292,30 @@ function changeBackgroundColor() {
 }
 
 changeBackgroundBtn.addEventListener('click', changeBackgroundColor);
+
+
+// Scroll
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollContainer = document.getElementById('scrollContainer');
+    const speed = 100;
+    
+    let isScrolling = false;
+
+    function autoScroll() {
+        if (!isScrolling) return;
+        
+        const currentScrollPosition = scrollContainer.scrollLeft;
+        
+        scrollContainer.scrollLeft += speed * 0.0167;
+
+        if (currentScrollPosition >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+            scrollContainer.scrollLeft = 0;
+        }
+        
+        requestAnimationFrame(autoScroll);
+    }
+
+    isScrolling = true;
+    requestAnimationFrame(autoScroll);
+});
