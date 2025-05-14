@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -10,6 +14,10 @@ body {
 .center {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
+}
+
+.header-mini {
+    display: none;
 }
 
 .header {
@@ -281,6 +289,7 @@ body {
         line-height: 141.69%;
         letter-spacing: 0%;
         text-align: center;
+        transition: 0.3s;
         &:hover {
             box-sizing: border-box;
             border: 1px solid #000000;
@@ -306,3 +315,4 @@ body {
 }
 
 @import 'mobile';
+@import 'tablet';
